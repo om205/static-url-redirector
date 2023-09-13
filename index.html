@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting..</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            display: grid;
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message" id="message">Please wait. Leading to your destination in a while.....</div>
+    <script>
+        const url = 'https://docs.google.com/document/d/1H3vXcAUYxQui5VBKoCq9xbfd1AVW8nABOa8RqjSREWM/export?format=txt'
+
+        fetch(url)
+            .then((response) => response.text())
+            .then((data) => {
+                const urlTable = JSON.parse(data)
+                const searchKey = location.search.split('goto=')[1]
+                location.href = urlTable[searchKey]
+            })
+
+
+    </script>
+</body>
+
+</html>
