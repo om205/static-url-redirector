@@ -1,0 +1,2 @@
+# URL Redirection Using HTML, CSS, and JavaScript
+A simple web application that performs URL redirection using HTML, CSS, and JavaScript. This project is created by me to create custom URL redirects, making it easy to share links with others.
